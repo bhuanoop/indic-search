@@ -1,0 +1,122 @@
+[
+  {
+    "id": "syn_fever",
+    "words": ["fever", "bukhar", "bookhar", "bukhaar", "bokhar", "बुखार", "ज्वर", "ताप"]
+  },
+  {
+    "id": "syn_cough",
+    "words": ["cough", "khansi", "khasi", "khaansi", "kansi", "खांसी", "खाँसी"]
+  },
+  {
+    "id": "syn_cold",
+    "words": ["cold", "jukam", "zukam", "jukaam", "sardi", "nazla", "सर्दी", "जुकाम", "जुखाम", "नजला"]
+  },
+  {
+    "id": "syn_pain",
+    "words": ["pain", "dard", "peeda", "taklif", "दर्द", "पीड़ा", "तकलीफ", "कष्ट"]
+  },
+  {
+    "id": "syn_headache",
+    "words": ["headache", "sar dard", "sardard", "sir dard", "sirdard", "सिरदर्द", "सर दर्द", "शिरोवेदना"]
+  },
+  {
+    "id": "syn_buy",
+    "words": ["buy", "purchase", "kharidna", "kharid", "kharido", "खरीदना", "खरीद", "क्रय"]
+  },
+  {
+    "id": "syn_sell",
+    "words": ["sell", "sale", "bechna", "becho", "bikri", "बेचना", "बिक्री", "विक्रय"]
+  },
+  {
+    "id": "syn_price",
+    "words": ["price", "cost", "rate", "keemat", "daam", "kimat", "कीमत", "दाम", "मूल्य"]
+  },
+  {
+    "id": "syn_discount",
+    "words": ["discount", "offer", "chhoot", "chhut", "choot", "छूट", "डिस्काउंट", "ऑफर"]
+  },
+  {
+    "id": "syn_house",
+    "words": ["home", "house", "ghar", "makaan", "makan", "aawas", "घर", "मकान", "गृह", "आवास"]
+  },
+  {
+    "id": "syn_car",
+    "words": ["car", "vehicle", "gadi", "gaadi", "vaahan", "गाड़ी", "कार", "वाहन"]
+  },
+  {
+    "id": "syn_phone",
+    "words": ["phone", "mobile", "cellphone", "durbhash", "फोन", "फ़ोन", "मोबाइल", "दूरभाष"]
+  },
+  {
+    "id": "syn_computer",
+    "words": ["computer", "pc", "laptop", "sanganak", "कंप्यूटर", "कम्प्यूटर", "संगणक", "लैपटॉप"]
+  },
+  {
+    "id": "syn_book",
+    "words": ["book", "kitab", "pustak", "ग्रंथ", "किताब", "पुस्तक"]
+  },
+  {
+    "id": "syn_job",
+    "words": ["job", "work", "employment", "naukri", "kaam", "rozgar", "नौकरी", "काम", "रोजगार", "कार्य"]
+  },
+  {
+    "id": "syn_news",
+    "words": ["news", "samachar", "khabar", "taaza khabar", "समाचार", "खबर", "ख़बर"]
+  },
+  {
+    "id": "syn_weather",
+    "words": ["weather", "climate", "mausam", "ritoo", "मौसम", "जलवायु", "ऋतु"]
+  },
+  {
+    "id": "syn_food",
+    "words": ["food", "meal", "khana", "bhojan", "ahar", "खाना", "भोजन", "आहार"]
+  },
+  {
+    "id": "syn_water",
+    "words": ["water", "pani", "paani", "jal", "नीर", "पानी", "जल"]
+  },
+  {
+    "id": "syn_help",
+    "words": ["help", "support", "madad", "sahayata", "sahayog", "मदद", "सहायता", "सहयोग"]
+  },
+  {
+    "id": "syn_health",
+    "words": ["health", "fitness", "swasthya", "sehat", "tandurusti", "स्वास्थ्य", "सेहत", "तंदुरुस्ती"]
+  },
+  {
+    "id": "syn_medicine",
+    "words": ["medicine", "dawa", "dawai", "davai", "aushadhi", "ilaj", "दवा", "दवाई", "औषधि", "उपचार", "इलाज"]
+  },
+  {
+    "id": "syn_city",
+    "words": ["city", "town", "shahar", "nagar", "शहर", "नगर"]
+  },
+  {
+    "id": "syn_country",
+    "words": ["country", "nation", "desh", "vatan", "वतन", "देश", "राष्ट्र"]
+  },
+  {
+    "id": "syn_travel",
+    "words": ["travel", "journey", "tour", "yatra", "safar", "यात्रा", "सफ़र", "सफर", "भ्रमण"]
+  },
+  {
+    "id": "syn_hotel",
+    "words": ["hotel", "stay", "lodge", "dharamshala", "होटल", "सराय", "धर्मशाला"]
+  },
+  {
+    "id": "syn_school",
+    "words": ["school", "college", "vidyalaya", "pathshala", "स्कूल", "विद्यालय", "पाठशाला", "कॉलेज"]
+  },
+  {
+    "id": "syn_study",
+    "words": ["study", "education", "padhai", "shiksha", "adhyayan", "पढ़ाई", "शिक्षा", "अध्ययन"]
+  },
+  {
+    "id": "syn_friend",
+    "words": ["friend", "dost", "mitra", "yaar", "दोस्त", "मित्र", "यार", "सखा"]
+  },
+  {
+    "id": "syn_fast",
+    "words": ["fast", "quick", "jaldi", "tez", "sheeghra", "जल्दी", "तेज़", "तेज", "शीघ्र"]
+  }
+]

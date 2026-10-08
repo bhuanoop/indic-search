@@ -1,0 +1,36 @@
+{
+  "name": "indic-search/indic-search",
+  "description": "High-performance Multilingual & Indic Search Engine for PHP & MySQL with Devanagari Akshara typo-tolerance, Hinglish transliteration, and BM25F ranking.",
+  "keywords": [
+    "indic",
+    "search",
+    "hindi",
+    "hinglish",
+    "devanagari",
+    "typo-tolerance",
+    "fuzzy-search",
+    "bm25f",
+    "fulltext",
+    "mysql",
+    "transliteration"
+  ],
+  "homepage": "https://github.com/anoop/indic-search",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "IndicSearch Contributors",
+      "email": "info@example.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.4",
+    "ext-pdo": "*",
+    "ext-mbstring": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "IndicSearch\\": "src/"
+    }
+  },
+  "minimum-stability": "stable"
+}
