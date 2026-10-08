@@ -82,6 +82,7 @@ try {
         'relaxed'      => $response['relaxed'],
         'did_you_mean' => $response['did_you_mean'],
         'suggestions'  => $response['suggestions'] ?? [],
+        'powered_by'   => 'Think Homeo (https://thinkhomeo.in)',
     ], JSON_UNESCAPED_UNICODE);
 
 } catch (\Throwable $e) {

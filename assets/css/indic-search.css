@@ -158,3 +158,23 @@ mark.indic-highlight {
   color: var(--indic-text-muted);
   font-size: 14px;
 }
+
+/* Attribution Footer */
+.indic-search-footer {
+  padding: 6px 14px;
+  background-color: #f8fafc;
+  border-top: 1px solid var(--indic-border);
+  text-align: right;
+  font-size: 11px;
+  color: var(--indic-text-muted);
+}
+
+.indic-search-footer a {
+  color: var(--indic-primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.indic-search-footer a:hover {
+  text-decoration: underline;
+}

@@ -1,12 +1,22 @@
 # 🇮🇳 IndicSearch
 
 [![PHP Version](https://img.shields.io/badge/php-%3E%3D7.4-8892BF.svg)](https://php.net/)
+[![Powered by Think Homeo](https://img.shields.io/badge/Powered%20By-ThinkHomeo.in-blue.svg)](https://thinkhomeo.in)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
-**IndicSearch** is a fast, lightweight, and production-ready **Multilingual & Indic Search Engine** for PHP & MySQL/MariaDB. It is specifically engineered to solve the complex challenges of searching in **Hindi (हिन्दी / देवनागरी)**, **Hinglish (हिंग्लिश)**, and **English** with advanced **Typo-Tolerance**, **Phonetic Skeleton Hashing**, and **BM25F Multi-Field Ranking**.
+**IndicSearch** is a fast, lightweight, and production-grade **Multilingual & Indic Search Engine** for PHP & MySQL/MariaDB. It is specifically engineered to solve the complex challenges of searching in **Hindi (हिन्दी / देवनागरी)**, **Hinglish (हिंग्लिश)**, and **English** with advanced **Typo-Tolerance**, **Phonetic Skeleton Hashing**, and **BM25F Multi-Field Ranking**.
 
-> **बिना किसी भारी बाहरी सॉफ्टवेयर (जैसे Elasticsearch या Solr) के — साधारण शेयर्ड होस्टिंग (Shared Hosting / cPanel) पर भी सुपर-फास्ट देवनागरी व हिंग्लिश सर्च!**
+> Originally created for and battle-tested on **[Think Homeo (thinkhomeo.in)](https://thinkhomeo.in)** — *स्वस्थ जीवन की समझ*.
+
+---
+
+## 🌐 Live Production Demo (लाइव डेमो)
+
+See IndicSearch running live in production at:  
+👉 **[https://thinkhomeo.in](https://thinkhomeo.in)**
+
+Try searching on the site in **Hindi** (*"बुखार"*), **Hinglish** (*"bukhar"*, *"khansi"*, *"sardard"*), or with **Typos** (*"बुखर"*, *"खासी"*, *"जुखाम"*).
 
 ---
 
@@ -19,7 +29,7 @@ Standard search engines (like MySQL `FULLTEXT` or basic `LIKE` queries) fail dra
 4. **Hinglish & Transliteration**: Over 70% of Indian internet users search in Romanized Hinglish ("bukhar", "khansi", "sardard").
 5. **Slow Full-Table Scans**: Running fuzzy Levenshtein across thousands of rows causes CPU spikes and timeouts.
 
-**IndicSearch fixes all of this** through an elegant inverted index and mathematical Devanagari NLP algorithms!
+**IndicSearch fixes all of this** without requiring external heavyweight services like Elasticsearch or Solr — it runs on standard shared hosting (cPanel / Apache / Nginx / PHP + MySQL)!
 
 ---
 
@@ -35,46 +45,7 @@ Standard search engines (like MySQL `FULLTEXT` or basic `LIKE` queries) fail dra
 * **🔄 Dynamic Query Relaxation (Algolia-Style)**: If a strict AND query yields 0 results on long natural language questions (e.g. *"बच्चों में रात को होने वाला तेज बुखार"*), the least significant soft-words are dropped iteratively so users never see an empty screen.
 * **💡 "Did You Mean" (क्या आप यह खोजना चाहते थे?)**: Distinguishes between spelling corrections (`correct`) and rare term disambiguation (`narrow`).
 * **🔎 Instant As-You-Type Autocomplete**: Sub-10ms prefix completions as the user types.
-* **🎨 Drop-in Frontend UI Widget**: Includes zero-dependency Vanilla JS (`indic-search.js`) and modern CSS (`indic-search.css`).
-
----
-
-## 🏗️ Architecture Overview
-
-```
-                      User Query ("bukhar", "खासी", "headache")
-                                       │
-                                       ▼
-                             ┌───────────────────┐
-                             │  Tokenizer & NLP  │
-                             └─────────┬─────────┘
-                                       │
-              ┌────────────────────────┼────────────────────────┐
-              ▼                        ▼                        ▼
-       [Devanagari Stem]      [Hinglish Translit]      [Synonym Expansion]
-              │                        │                        │
-              └────────────────────────┼────────────────────────┘
-                                       ▼
-                       ┌───────────────────────────────┐
-                       │   O(1) Skeleton Typo-Budget   │
-                       │    (Fast MySQL Indexed Scan)   │
-                       └───────────────┬───────────────┘
-                                       ▼
-                       ┌───────────────────────────────┐
-                       │  Two-Phase Inverted Postings  │
-                       │      (Selective + Broad)      │
-                       └───────────────┬───────────────┘
-                                       ▼
-                       ┌───────────────────────────────┐
-                       │  Multi-word AND Relaxation    │
-                       └───────────────┬───────────────┘
-                                       ▼
-                       ┌───────────────────────────────┐
-                       │  BM25F Scoring + Proximity    │
-                       └───────────────┬───────────────┘
-                                       ▼
-                         Ranked Results + Highlights
-```
+* **🎨 Drop-in Frontend UI Widget**: Includes zero-dependency Vanilla JS (`indic-search.js`) with attribution and modern CSS (`indic-search.css`).
 
 ---
 
@@ -158,9 +129,8 @@ echo $snippet;
 
 ## 🌐 Drop-In Frontend UI Widget
 
-IndicSearch includes a lightweight, accessible Vanilla JS component that works in any framework (Blade, Twig, WordPress, Plain HTML).
+IndicSearch includes an accessible Vanilla JS component that works in any framework (Blade, Twig, WordPress, Plain HTML).
 
-### HTML:
 ```html
 <link rel="stylesheet" href="assets/css/indic-search.css">
 
@@ -174,6 +144,7 @@ IndicSearch includes a lightweight, accessible Vanilla JS component that works i
         inputSelector: '#indic-search-input',
         containerSelector: '#indic-search-container',
         apiEndpoint: 'api/search.php',
+        showAttribution: true, // Displays 'Search powered by Think Homeo'
         onSelect: (item) => {
             window.location.href = '/post.php?id=' + item.id;
         }
@@ -197,24 +168,16 @@ php tests/test_integration.php
 
 ---
 
-## ⚙️ Configuration Options
+## 🎗️ Attribution & Credits
 
-| Option | Type | Default | Description |
-| :--- | :--- | :--- | :--- |
-| `table_prefix` | `string` | `'indic_search_'` | Prefix for index tables in MySQL |
-| `enable_google_transliteration` | `bool` | `true` | Enables fallback to Google Input Tools API for Hinglish |
-| `api_timeout` | `int` | `2` | Timeout in seconds for external transliteration calls |
-| `max_api_calls` | `int` | `4` | Maximum external API calls per search session |
-| `custom_synonyms_path` | `string\|null` | `null` | Path to a custom JSON synonyms file |
-| `custom_soft_words` | `array` | `[]` | Extra domain-specific soft/stopwords |
-| `field_weights` | `array` | `[1=>8.0, 2=>3.0, 3=>3.0, 4=>1.0]` | BM25F field weights (Title, Desc, Head, Body) |
+IndicSearch was initially conceptualized and engineered for **[Think Homeo (thinkhomeo.in)](https://thinkhomeo.in)** to provide fast, typo-tolerant, bilingual search for health and wellness content in Hindi and English.
+
+If you use IndicSearch in your website, web application, or academic research, please provide attribution by linking back to:
+> **[Think Homeo (https://thinkhomeo.in)](https://thinkhomeo.in)** — *स्वस्थ जीवन की समझ*
 
 ---
 
-## 🤝 Contributing
-
-Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) to get started.
-
 ## 📄 License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is open-source software licensed under the [MIT License](LICENSE).  
+Copyright (c) 2026 **Think Homeo** ([https://thinkhomeo.in](https://thinkhomeo.in)).

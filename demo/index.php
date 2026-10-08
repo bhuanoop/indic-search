@@ -187,7 +187,8 @@ try {
 <div class="container">
     <div class="header">
         <h1>🇮🇳 IndicSearch</h1>
-        <p>Lightweight Multilingual Search Engine with Typo-Tolerance for Hindi, Hinglish & English</p>
+        <p>Lightweight Multilingual Search Engine with Typo-Tolerance for Hindi, Hinglish & English<br>
+        <small style="color:#64748b; font-size:0.9rem;">Originally developed for <a href="https://thinkhomeo.in" target="_blank" rel="noopener" style="color:#2563eb; text-decoration:none; font-weight:600;">Think Homeo (thinkhomeo.in)</a> — स्वस्थ जीवन की समझ</small></p>
     </div>
 
     <div class="search-wrapper">
@@ -256,6 +257,10 @@ try {
             <?php endif; ?>
         </div>
     <?php endif; ?>
+
+    <div style="text-align:center; margin-top:40px; padding-top:20px; border-top:1px solid #e2e8f0; color:#64748b; font-size:0.9rem;">
+        मूल एल्गोरिदम एवं प्रायोजक: <a href="https://thinkhomeo.in" target="_blank" rel="noopener" style="color:#2563eb; font-weight:600; text-decoration:none;">Think Homeo (thinkhomeo.in)</a> — स्वस्थ जीवन की समझ
+    </div>
 </div>
 
 <script src="../assets/js/indic-search.js"></script>

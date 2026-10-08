@@ -19,6 +19,9 @@
       this.apiEndpoint = options.apiEndpoint || '/api/search.php';
       this.debounceMs = options.debounceMs || 250;
       this.minChars = options.minChars || 2;
+      this.showAttribution = options.showAttribution !== false;
+      this.attributionUrl = options.attributionUrl || 'https://thinkhomeo.in';
+      this.attributionText = options.attributionText || 'Think Homeo';
       this.onSelect = options.onSelect || null;
       this.renderItem = options.renderItem || this.defaultRenderItem;
 
@@ -214,6 +217,14 @@
         });
 
         this.dropdown.appendChild(list);
+      }
+
+      // 4. Attribution Footer
+      if (this.showAttribution) {
+        const footer = document.createElement('div');
+        footer.className = 'indic-search-footer';
+        footer.innerHTML = `Search powered by <a href="${this.escape(this.attributionUrl)}" target="_blank" rel="noopener">${this.escape(this.attributionText)}</a>`;
+        this.dropdown.appendChild(footer);
       }
 
       this.show();

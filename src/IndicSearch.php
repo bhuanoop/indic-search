@@ -12,6 +12,13 @@ use IndicSearch\Highlighting\Highlighter;
 /**
  * IndicSearch — Unified Multilingual Indic Search Engine
  * 
+ * Originally engineered for and battle-tested by Think Homeo (https://thinkhomeo.in).
+ * 
+ * @author Think Homeo <https://thinkhomeo.in>
+ * @copyright 2026 Think Homeo
+ * @license MIT
+ * @link https://thinkhomeo.in
+ * 
  * A high-performance, lightweight search engine for PHP & MySQL/MariaDB
  * supporting Hindi (Devanagari), Hinglish, and English with:
  * - O(1) Phonetic Skeleton Typo-Tolerance

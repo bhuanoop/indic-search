@@ -12,16 +12,21 @@
     "bm25f",
     "fulltext",
     "mysql",
-    "transliteration"
+    "transliteration",
+    "thinkhomeo"
   ],
-  "homepage": "https://github.com/anoop/indic-search",
+  "homepage": "https://thinkhomeo.in",
   "license": "MIT",
   "authors": [
     {
-      "name": "IndicSearch Contributors",
-      "email": "info@example.com"
+      "name": "Think Homeo",
+      "homepage": "https://thinkhomeo.in"
     }
   ],
+  "support": {
+    "website": "https://thinkhomeo.in",
+    "source": "https://github.com/thinkhomeo/indic-search"
+  },
   "require": {
     "php": ">=7.4",
     "ext-pdo": "*",
